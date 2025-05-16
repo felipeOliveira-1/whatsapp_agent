@@ -43,6 +43,16 @@ user_threads = {}
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    """Página inicial para verificar se o serviço está funcionando"""
+    return {"status": "online", "service": "WhatsApp OpenAI Assistant"}
+
+@app.route('/', methods=['POST'])
+def root_webhook():
+    """Rota alternativa para capturar requisições enviadas para a raiz"""
+    return webhook()
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     # Extrair informações da mensagem
