@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: whatsapp-openai-assistant
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app -c gunicorn_config.py
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_ASSISTANT_ID
+        sync: false
+      - key: PORT
+        value: 5000
+      - key: DEBUG
+        value: false
