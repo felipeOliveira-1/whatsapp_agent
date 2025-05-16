@@ -163,7 +163,7 @@ def health_check():
     return {"status": "ok", "timestamp": time.time()}
 
 if __name__ == '__main__':
-    # Configura a porta a partir da variável de ambiente ou usa 10000 como padrão (valor esperado pelo Render)
-    port = int(os.environ.get('PORT', 10000))
+    # Configura a porta a partir da variável de ambiente ou usa 5000 como padrão
+    port = int(os.environ.get('PORT', 5000))
     print(f"Iniciando servidor na porta {port}")
     app.run(host='0.0.0.0', port=port, debug=(os.environ.get('DEBUG', 'False').lower() == 'true'))

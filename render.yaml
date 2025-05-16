@@ -17,7 +17,7 @@ services:
       - key: OPENAI_ASSISTANT_ID
         sync: false
       - key: PORT
-        value: 10000
+        value: 5000
       - key: DEBUG
         value: false
       - key: PYTHON_VERSION

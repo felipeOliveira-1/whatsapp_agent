@@ -1,8 +1,8 @@
 import os
 import multiprocessing
 
-# Configuração básica - Render espera que a aplicação use a porta 10000 por padrão
-bind = "0.0.0.0:" + os.environ.get("PORT", "10000")
+# Configuração básica - Render fornece a porta via variável de ambiente PORT
+bind = "0.0.0.0:" + os.environ.get("PORT", "5000")
 
 # Número de workers baseado no número de CPUs disponíveis
 try:

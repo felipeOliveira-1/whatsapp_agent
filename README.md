@@ -59,7 +59,7 @@ Siga estes passos para fazer o deploy no Render:
      - `TWILIO_AUTH_TOKEN`: Seu token de autenticação Twilio
      - `OPENAI_API_KEY`: Sua chave da API da OpenAI
      - `OPENAI_ASSISTANT_ID`: ID do seu Assistante na OpenAI
-     - `PORT`: 10000 (o Render definirá isso automaticamente, mas é bom ter como fallback)
+     - `PORT`: 5000 (o Render definirá isso automaticamente, mas é bom ter como fallback)
      - `PYTHON_VERSION`: 3.10.8
 
 4. **Configurações de build**
@@ -87,8 +87,8 @@ Siga estes passos para fazer o deploy no Render:
 
 ## Solução de Problemas Comuns
 
-- **Erro de porta**: Certifique-se de que sua aplicação está configurada para usar a porta da variável de ambiente `PORT`
-- **Timeout no deploy**: Verifique se o comando de inicialização está correto e se a aplicação está vinculada a `0.0.0.0`
+- **Erro de porta**: Certifique-se de que sua aplicação está configurada para usar a porta da variável de ambiente `PORT` (5000 por padrão)
+- **Timeout no deploy**: Verifique se o comando de inicialização está correto e se a aplicação está vinculada a `0.0.0.0` na porta correta
 - **Erros de dependência**: Verifique se todas as dependências estão listadas no `requirements.txt`
 - **Logs**: Sempre verifique os logs no painel do Render para identificar problemas
 
