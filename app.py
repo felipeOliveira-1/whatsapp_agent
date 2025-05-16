@@ -129,7 +129,7 @@ def send_whatsapp_message(to_number, message_body):
     client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
     
     message = client.messages.create(
-        from_='whatsapp:+14155238886',  # Número do Twilio Sandbox
+        from_=f'whatsapp:{os.getenv("WHATSAPP_NUMBER", "+14155238886")}',  # Número do Twilio Sandbox
         body=message_body,
         to=f'whatsapp:{to_number}'
     )
@@ -143,7 +143,7 @@ def send_template_message(to_number, template_id, variables):
     client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
     
     message = client.messages.create(
-        from_='whatsapp:+14155238886',  # Número do Twilio Sandbox
+        from_=f'whatsapp:{os.getenv("WHATSAPP_NUMBER", "+14155238886")}',  # Seu número ou sandbox
         content_sid=template_id,
         content_variables=json.dumps(variables),
         to=f'whatsapp:{to_number}'
