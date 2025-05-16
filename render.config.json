@@ -1,0 +1,11 @@
+{
+  "env": {
+    "PORT": "10000",
+    "DEBUG": "false",
+    "PYTHONUNBUFFERED": "true"
+  },
+  "buildCommand": "pip install -r requirements.txt",
+  "startCommand": "gunicorn app:app -c gunicorn_config.py",
+  "healthCheckPath": "/health",
+  "plan": "free"
+}
