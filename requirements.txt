@@ -1,6 +1,26 @@
+# Core
 flask==2.3.3
 twilio==8.5.0
 openai==1.3.0
 python-dotenv==1.0.0
+
+# Servidor WSGI
 gunicorn==21.2.0
+
+# Dependências de rede
 requests==2.31.0
+httpx==0.25.2
+
+# Utilitários
+python-dateutil==2.8.2
+pytz==2023.3.post1
+
+# Segurança
+cryptography==41.0.3
+
+# Logging
+structlog==23.1.0
+
+# Testes (opcional)
+pytest==7.4.0
+pytest-cov==4.1.0

@@ -163,5 +163,7 @@ def health_check():
     return {"status": "ok", "timestamp": time.time()}
 
 if __name__ == '__main__':
-    # Para produção, considere usar gunicorn ou outro servidor WSGI
-    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    # Configura a porta a partir da variável de ambiente ou usa 5000 como padrão
+    port = int(os.environ.get('PORT', 5000))
+    print(f"Iniciando servidor na porta {port}")
+    app.run(host='0.0.0.0', port=port)

@@ -4,6 +4,9 @@ services:
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app -c gunicorn_config.py
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
     envVars:
       - key: TWILIO_ACCOUNT_SID
         sync: false
@@ -14,6 +17,10 @@ services:
       - key: OPENAI_ASSISTANT_ID
         sync: false
       - key: PORT
-        value: 5000
+        value: 10000
       - key: DEBUG
         value: false
+      - key: PYTHON_VERSION
+        value: 3.10.8
+      - key: PYTHONUNBUFFERED
+        value: true

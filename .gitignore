@@ -3,6 +3,8 @@ venv/
 env/
 ENV/
 .env
+.env.*
+!.env.example
 
 # Arquivos Python
 __pycache__/
@@ -19,6 +21,243 @@ eggs/
 lib/
 lib64/
 parts/
+.python-version
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs e bancos de dados
+*.log
+*.sqlite
+*.db
+*.sql
+*.sqlite3
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração local
+instance/
+.webassets-cache
+
+# Arquivos de ambiente virtual
+.python-version
+
+# Arquivos de cache
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Arquivos de distribuição / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de teste
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Arquivos de log
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos de ambiente
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Arquivos do PyCharm
+.idea/
+
+# Arquivos do VSCode
+.vscode/
+
+# Arquivos do Jupyter Notebook
+.ipynb_checkpoints
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Arquivos de instalação
+*.exe
+*.msi
+*.dll
+
+# Arquivos de backup
+*.bak
+*.swp
+*~
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente virtual
+venv/
+env/
+ENV/
+
+# Arquivos específicos do projeto
+instance/
+.webassets-cache
+
+# Arquivos de log
+logs/
+*.log
+
+# Arquivos de banco de dados
+*.db
+*.sqlite3
+
+# Arquivos de cache
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Arquivos de distribuição / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de teste
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Arquivos de log
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos de ambiente
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Arquivos do PyCharm
+.idea/
+
+# Arquivos do VSCode
+.vscode/
+
+# Arquivos do Jupyter Notebook
+.ipynb_checkpoints
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Arquivos de instalação
+*.exe
+*.msi
+*.dll
+
+# Arquivos de backup
+*.bak
+*.swp
+*~
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente virtual
+venv/
+env/
+ENV/
+
+# Arquivos específicos do projeto
+instance/
+.webassets-cache
+
+# Arquivos de log
+logs/
+*.log
+
+# Arquivos de banco de dados
+*.db
+*.sqlite3
 sdist/
 var/
 wheels/
