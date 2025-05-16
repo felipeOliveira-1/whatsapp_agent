@@ -156,6 +156,11 @@ def health_check():
     """Endpoint simples para verificar se a aplicação está funcionando"""
     return {"status": "ok", "timestamp": time.time()}
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    """Endpoint ultra-leve para keep-alive"""
+    return "pong", 200
+
 if __name__ == '__main__':
     # Configura a porta a partir da variável de ambiente ou usa 5000 como padrão
     port = int(os.environ.get('PORT', 5000))
