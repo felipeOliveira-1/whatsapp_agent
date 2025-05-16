@@ -32,8 +32,8 @@ ngrok http 5000
 
 ### Deployment (Render)
 ```bash
-# Uses gunicorn configuration
-gunicorn app:app -c gunicorn_config.py
+# Uses start.sh script which handles PORT environment variable
+./start.sh
 
 # Health check endpoint
 curl http://localhost:5000/health

@@ -64,7 +64,7 @@ Siga estes passos para fazer o deploy no Render:
 
 4. **Configurações de build**
    - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app:app -c gunicorn_config.py`
+   - **Start Command**: `./start.sh`
 
 5. **Plano e região**
    - Selecione o plano gratuito (Free) para começar

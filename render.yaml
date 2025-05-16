@@ -3,7 +3,7 @@ services:
     name: whatsapp-openai-assistant
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app -c gunicorn_config.py
+    startCommand: ./start.sh
     plan: free
     healthCheckPath: /health
     autoDeploy: true
