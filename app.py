@@ -16,26 +16,10 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')  # Manter seguro
 ASSISTANT_ID = os.getenv('OPENAI_ASSISTANT_ID')  # ID do seu Assistant
 
 # Inicializar cliente OpenAI com a versão v2 da API de Assistants
-# Inicialização mais segura para evitar problemas com o argumento 'proxies'
-try:
-    client = OpenAI(
-        api_key=OPENAI_API_KEY,
-        default_headers={"OpenAI-Beta": "assistants=v2"}
-    )
-except TypeError as e:
-    if 'proxies' in str(e):
-        # Se o erro for relacionado ao argumento 'proxies'
-        import httpx
-        # Criação manual do cliente HTTP com parâmetros mínimos
-        http_client = httpx.Client()
-        client = OpenAI(
-            api_key=OPENAI_API_KEY,
-            http_client=http_client,
-            default_headers={"OpenAI-Beta": "assistants=v2"}
-        )
-    else:
-        # Se for outro tipo de erro, re-lança
-        raise
+client = OpenAI(
+    api_key=OPENAI_API_KEY,
+    default_headers={"OpenAI-Beta": "assistants=v2"}
+)
 
 # Dicionário para armazenar threads por número de telefone
 # Em produção, usar um banco de dados
